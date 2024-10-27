@@ -1,0 +1,37 @@
+services:
+  server:
+    image: vinstp/check_saver_server:latest
+
+    restart: always
+
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+
+    ports:
+      - "1200:1200"
+
+
+
+  db:
+    image: vinstp/check_saver_database:latest
+
+    restart: always
+
+    ports:
+      - "5400:5432"
+
+    volumes:
+      - docker_postgres_check_saver_initdb_volume:/docker-entrypoint-initdb.d
+      - docker_postgres_check_saver_volume:/var/lib/postgresql/data
+
+    build:
+      context: postgres/
+      dockerfile: Dockerfile
+
+
+
+# Храним репозитории при перезапусках, чтобы не клонить каждый раз
+volumes:
+  docker_postgres_check_saver_initdb_volume:
+  docker_postgres_check_saver_volume:
