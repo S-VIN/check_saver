@@ -1,7 +1,7 @@
 ###
 # Test your FastAPI endpoints
 
-POST http://127.0.0.1:8000/products/
+POST http://127.0.0.1:1200/products/
 Content-Type: application/json
 
 {
@@ -14,7 +14,7 @@ Content-Type: application/json
 
 
 ###
-POST http://127.0.0.1:8000/purchases/
+POST http://127.0.0.1:1200/purchases/
 Content-Type: application/json
 
 {
@@ -29,14 +29,14 @@ POST http://195.133.21.239:1200/purchases/
 Content-Type: application/json
 
 {
-  "name": "test_name",
-  "volume": "1l",
-  "brand": "домик в деревне",
-  "category": "food"
+  "product_id": 1,
+  "price": 200,
+  "quantity": 2,
+  "tags": ["вредно", "не дома"]
 }
 
 ###
-POST http://127.0.0.1:8000/checks/
+POST http://127.0.0.1:1200/checks/
 Content-Type: application/json
 
 {
@@ -46,7 +46,7 @@ Content-Type: application/json
 ###
 
 
-GET http://127.0.0.1:8000/hello/User
+GET http://195.133.21.239:1200/products/category/unique
 Accept: application/json
 
 ###

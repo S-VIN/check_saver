@@ -1,14 +1,7 @@
 from model import Purchase, Product, Check
 from fastapi import HTTPException
 from router import router
-
-
-import psycopg2
-
-try:
-    conn = psycopg2.connect(dbname='check_saver', user='postgres', password='postgres', host='localhost', port='5400')
-except:
-    print('Can`t establish connection to database')
+from db_connector import conn
 
 
 # Endpoint to add a new product
