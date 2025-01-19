@@ -169,3 +169,9 @@ cython_debug/
 /.idea/inspectionProfiles/profiles_settings.xml
 /.idea/sqldialects.xml
 /.idea/vcs.xml
+/nginx/certs/fullchain.pem
+/nginx/certs/privkey.pem
+/bot/check_saver_bot.session
+/bot/check_saver.session
+/bot/check_saver_bot.session-journal
+/client/package-lock.json

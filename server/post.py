@@ -5,7 +5,7 @@ from db_connector import conn
 
 
 # Endpoint to add a new product
-@router.post("/products/")
+@router.post("/api/products/")
 async def add_product(product: Product):
     cur = conn.cursor()
     try:
@@ -21,7 +21,7 @@ async def add_product(product: Product):
         raise HTTPException(status_code=500, detail="Failed to add product")
 
 # Endpoint to add a new purchase
-@router.post("/purchases/")
+@router.post("/api/purchases/")
 async def add_purchase(purchase: Purchase):
     cur = conn.cursor()
     try:
@@ -37,7 +37,7 @@ async def add_purchase(purchase: Purchase):
         raise HTTPException(status_code=500, detail="Failed to add purchase")
 
 # Endpoint to add a new check
-@router.post("/checks/")
+@router.post("/api/checks/")
 async def add_check(check: Check):
     cur = conn.cursor()
     try:

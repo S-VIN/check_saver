@@ -10,6 +10,7 @@ COPY model.py ./
 COPY post.py ./
 COPY router.py ./
 COPY db_connector.py ./
+COPY router.py ./
 
 # Устанавливаем зависимости
 COPY requirements.txt ./

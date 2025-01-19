@@ -44,9 +44,12 @@ Content-Type: application/json
 }
 
 ###
+GET http://127.0.0.1:1200/products/category/unique
+Accept: application/json
 
 
-GET http://195.133.21.239:1200/products/category/unique
+###
+GET http://127.0.0.1:1200/products/unique
 Accept: application/json
 
 ###

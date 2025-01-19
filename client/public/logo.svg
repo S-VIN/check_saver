@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <!-- Background Circle -->
+  <circle cx="50" cy="50" r="48" fill="#4CAF50" stroke="#388E3C" stroke-width="4" />
+
+  <!-- Check Icon -->
+  <rect x="30" y="30" width="40" height="30" fill="#FFFFFF" rx="2" ry="2" />
+  <path d="M30,60 L70,60 Q67,65 50,65 Q33,65 30,60 Z" fill="#E0E0E0" />
+
+  <!-- Save Icon (Folder) -->
+  <path d="M35,25 L65,25 L70,30 L70,40 L30,40 L30,30 Z" fill="#FFC107" />
+
+  <!-- Text -->
+  <text x="50" y="85" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#FFFFFF">
+    CheckSaver
+  </text>
+</svg>

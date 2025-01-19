@@ -17,6 +17,7 @@ CREATE TABLE purchases(
     date DATE NOT NULL DEFAULT NOW(),
     price INTEGER CHECK (price > 0) NOT NULL,
     quantity INTEGER CHECK (quantity > 0) NOT NULL DEFAULT 1,
+    shop TEXT NOT NULL,
     tags TEXT[]
 );
 
