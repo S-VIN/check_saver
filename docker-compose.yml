@@ -1,7 +1,21 @@
 services:
+  server:
+    image: vinstp/check_saver_server:latest
+
+    restart: always
+
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+
+    ports:
+      - "1200:1200"
+
+
 
   db:
     image: vinstp/check_saver_database:latest
+
     restart: always
 
     ports:
@@ -16,59 +30,8 @@ services:
       dockerfile: Dockerfile
 
 
-  server:
-    image: vinstp/check_saver_server:latest
 
-    restart: always
-
-    build:
-      context: ./server
-      dockerfile: Dockerfile
-
-    ports:
-      - "1200:1200"
-
-    depends_on:
-      - db
-
-
-  client:
-    image: vinstp/check_saver_client:latest
-
-    restart: always
-
-    ports:
-      - "8080:8080"
-
-    build:
-      context: client/
-      dockerfile: Dockerfile
-
-    depends_on:
-      - server
-
-
-  nginx:
-    image: vinstp/check_saver_nginx:latest
-
-    build:
-      context: nginx/
-      dockerfile: Dockerfile
-
-    container_name: nginx
-
-    ports:
-      - "80:80"
-      - "443:443"
-
-    volumes:
-      - docker_nginx_check_saver_certs_volume:/etc/nginx/certs
-
-    depends_on:
-      - client
-
-
+# Храним репозитории при перезапусках, чтобы не клонить каждый раз
 volumes:
   docker_postgres_check_saver_initdb_volume:
   docker_postgres_check_saver_volume:
-  docker_nginx_check_saver_certs_volume:

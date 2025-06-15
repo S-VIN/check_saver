@@ -1,7 +1,7 @@
-CREATE DATABASE check_saver;
+CREATE DATABASE yuki_check_saver;
 
 -- Подключаемся к созданной БД
-\c check_saver;
+\c yuki_check_saver;
 
 -- Создаем таблицу для покупок
 CREATE TABLE products (

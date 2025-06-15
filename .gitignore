@@ -160,18 +160,4 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
-/.idea/.gitignore
-/.idea/checkSaver.iml
-/.idea/dataSources.xml
-/.idea/httpClient.xml
-/.idea/misc.xml
-/.idea/modules.xml
-/.idea/inspectionProfiles/profiles_settings.xml
-/.idea/sqldialects.xml
-/.idea/vcs.xml
-/nginx/certs/fullchain.pem
-/nginx/certs/privkey.pem
-/bot/check_saver_bot.session
-/bot/check_saver.session
-/bot/check_saver_bot.session-journal
-/client/package-lock.json
+/.idea/
